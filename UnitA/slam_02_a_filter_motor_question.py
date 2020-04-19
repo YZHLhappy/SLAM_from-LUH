@@ -85,5 +85,5 @@ if __name__ == '__main__':
     #绘制结果
     for pose in filtered:                                                  #对所有在filtered中的pose进行遍历
         print pose                                                         #打印输出每一个pose
-        plot([p[0] for p in filtered], [p[1] for p in filtered], 'bo')  #绘制
+        plot([p[0] for p in filtered], [p[1] for p in filtered], 'bo')     #绘制
     show()
