@@ -6,6 +6,7 @@
 # Compute the derivative of a scan.
 # 03_b_scan_derivative
 # Claus Brenner, 09 NOV 2012
+
 #计算扫描数据的一阶导数值
 #03_b_scan_derivative
 #作者：Claus Brenner, 09 NOV 2012
@@ -20,11 +21,13 @@ def compute_derivative(scan, min_dist):
         # --->>> Insert your code here.
         # Compute derivative using formula "(f(i+1) - f(i-1)) / 2".
         # Do not use erroneous scan values, which are below min_dist.
+        
         #在此输入你的代码
         #计算一阶导数用(f(i+1) - f(i-1)) / 2这个公式
         #不要使用错误的数据，这些数据低于min_dist值
-        l=scan[i-1]  #（圆柱体的地标）的左边的扫描值l
-        r=scan[i+1]  #（圆柱体的地标）的左边的扫描值r
+        
+        l=scan[i-1]                                           #（圆柱体的地标）的左边的扫描值l
+        r=scan[i+1]                                           #（圆柱体的地标）的左边的扫描值r
         if(l > min_dist and r > min_dist):
             derivative=(r-l)/2.0
             jumps.append(derivative)
@@ -36,11 +39,11 @@ def compute_derivative(scan, min_dist):
 
 if __name__ == '__main__':
 
-    minimum_valid_distance = 20.0  #最小有效距离=20.0
+    minimum_valid_distance = 20.0                             #最小有效距离=20.0
 
     # Read the logfile which contains all scans.读取包含所有扫描数据的文件
-    logfile = LegoLogfile()  #将类LegoLogfile中的数据输如logfile
-    logfile.read("robot4_scan.txt")  #读取"robot4_scan.txt"的数据
+    logfile = LegoLogfile()                                   #将类LegoLogfile中的数据输如logfile
+    logfile.read("robot4_scan.txt")                           #读取"robot4_scan.txt"的数据
 
     # Pick one scan.挑出一组扫描数据
     scan_no = 7
